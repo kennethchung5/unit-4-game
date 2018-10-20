@@ -1,3 +1,7 @@
 .crystalImg {
+    width: 130px;
+    height: 168px;
     border: orange solid thick;
+    float: left;
+    margin: auto;
 }
