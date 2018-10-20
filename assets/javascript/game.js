@@ -1,11 +1,15 @@
 //generate four distinct random numbers 1-12
 //19-120 for target number
 
-//event: clicked crystal
+
+var currentTotal;
+var targetNumber;
+
+var wins = 0;
+var losses = 0;
 
 function resetGame() {
-
-    var currentTotal = 0;
+    currentTotal = 0;
     $("#currentTotalDisplay").text(currentTotal);
 
     //generate array of four distinct random numbers
@@ -24,16 +28,38 @@ function resetGame() {
         $("#crystalImg" + i).attr("crystalValue", valuesArray[i]);
     };
 
-    var targetNumber = Math.floor(Math.random() * 102) + 19;
-    $("#targetNumberDisplay").text(targetNumber);
+    console.log("This is the array of values: " + valuesArray);
 
+    targetNumber = Math.floor(Math.random() * 102) + 19;
+    $("#targetNumberDisplay").text(targetNumber);
 };
 
 
-// $("#testBtn").on("click", function() {
-//     generate();
-// });
+resetGame();
+
 
 $(".crystalImg").on("click", function(){
-    alert("This crystal's value is " + $(this).attr("crystalValue"));
+    // alert("This crystal's value is " + $(this).attr("crystalValue"));
+
+    $("#resultDisplay").text("");
+
+    currentTotal += parseInt($(this).attr("crystalValue"));
+    $("#currentTotalDisplay").text(currentTotal);
+
+    if (currentTotal > targetNumber) {
+        //loss scenario
+        $("#resultDisplay").text("You lost!");
+        losses += 1;
+        $("#lossesDisplay").text(losses);
+        
+        resetGame();
+    }
+    else if (currentTotal === targetNumber) {
+        //win scenario
+        $("#resultDisplay").text("You won!");
+        wins += 1;
+        $("#winsDisplay").text(wins);
+
+        resetGame();
+    };
 });
