@@ -28,8 +28,6 @@ function resetGame() {
         $("#crystalImg" + i).attr("crystalValue", valuesArray[i]);
     };
 
-    console.log("This is the array of values: " + valuesArray);
-
     targetNumber = Math.floor(Math.random() * 102) + 19;
     $("#targetNumberDisplay").text(targetNumber);
 };
