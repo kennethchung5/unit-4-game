@@ -1,10 +1,15 @@
 body {
-    
+    background-color: gray;
+
+    /* Background pattern from Toptal Subtle Patterns */
+    background-image: url("../images/light-grey-terrazzo/light-grey-terrazzo.png");
 }
 
 .container {
     border: solid black;
     height: 400px;
+    background-color: white;
+    margin-top: 5%;
 }
 
 h1 {
