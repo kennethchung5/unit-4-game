@@ -7,21 +7,60 @@
 
 </head>
 <body>
-    <div class="container col-md-8" style="border: blue dashed;">
-
-        <div>Target: <span id=targetNumberDisplay></span></div>
-        <br>
-        <div>Current total: <span id="currentTotalDisplay"></span></div>
-        <br>
-        <div><span id="resultDisplay"></span></div>
-        <div>Wins: <span id="winsDisplay"></span></div>
-        <div>Losses: <span id="lossesDisplay"></span></div>
+    <div class="container col-md-10">
         <div class="row">
-            <div class="crystalsDisplay col-md-8" style="border: green dotted; margin: auto;">
-                <img id="crystalImg0" class="crystalImg" src="assets/images/Crystal1.png">
-                <img id="crystalImg1" class="crystalImg" src="assets/images/Crystal2.png">
-                <img id="crystalImg2" class="crystalImg" src="assets/images/Crystal3.png">
-                <img id="crystalImg3" class="crystalImg" src="assets/images/Crystal4.png">
+            <div class="col-md-5">
+                <div class="row">
+                    <!--put title here-->
+                    <h1>Crystal Collector</h1>
+                </div>
+                <div class="row instructions">
+                    <p>Click on a crystal to collect points and build your point total. To win, match your point total to the Target Number.</p>
+                    <p>Each of the four crystals has a hidden point value.</p>
+                    <p>Be careful! If your total exceeds the Target Number, you lose!</p>
+                    <p>After a win or loss, the game will present a new Target Number and set of hidden crystal values.</p>
+                </div>
+
+            </div>
+
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row scoreBox">
+                            <div class="col-md-6">
+                                <!--wins display-->
+                                <div>Wins: <span id="winsDisplay"></span></div>
+                            </div>    
+                            <div class="col-md-6">
+                                <!--losses display-->
+                                <div>Losses: <span id="lossesDisplay"></span></div>
+                            </div>    
+                        </div>
+                        <div class="row">
+                            <!--result message-->
+                            <div id="resultDisplay"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="targetNumberBox">
+                            <div class="row">
+                                <h3>Target Number:</h3>
+                            </div>
+                            <div class="row">
+                                <div id=targetNumberDisplay></div>
+                            </div>      
+                        </div>                  
+                    </div>
+                </div>
+                <div class="row">
+                    <img id="crystalImg0" class="crystalImg" src="assets/images/Crystal1.png">
+                    <img id="crystalImg1" class="crystalImg" src="assets/images/Crystal2.png">
+                    <img id="crystalImg2" class="crystalImg" src="assets/images/Crystal3.png">
+                    <img id="crystalImg3" class="crystalImg" src="assets/images/Crystal4.png">    
+                </div>
+                <div class="row">
+                    <div class="currentTotalBox">Current Total: <span id="currentTotalDisplay"></span></div>
+                </div>
             </div>
         </div>
     </div>
